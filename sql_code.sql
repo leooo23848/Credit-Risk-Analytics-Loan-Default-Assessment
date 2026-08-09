@@ -1,6 +1,4 @@
--- Consumer Loan Portfolio Risk Analysis
 
--- 1. Default rate by loan term and credit grade
 SELECT
     grade,
     term,
@@ -14,7 +12,8 @@ GROUP BY grade, term
 ORDER BY grade, term;
 
 
--- 2. Default rate by income
+
+
 SELECT
     CASE
         WHEN annual_income < 40000 THEN 'Very Low'
