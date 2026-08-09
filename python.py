@@ -24,9 +24,7 @@ default_rate = analysis_df["default"].mean() * 100
 print("Overall Default Rate:", round(default_rate, 2), "%")
 
 
-# ============================================================
-# INSIGHT 1: INCOME-BASED RISK SEGMENTATION
-# ============================================================
+
 
 analysis_df["income_group"] = pd.qcut(
     analysis_df["annual_income"],
@@ -58,11 +56,6 @@ print(
     round(reduction, 2),
     "%"
 )
-
-
-# ============================================================
-# INSIGHT 2: CREDIT GRADE + LOAN TERM
-# ============================================================
 
 grade_term_result = (
     analysis_df
